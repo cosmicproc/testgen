@@ -11,7 +11,7 @@ export const modelNames = {
     'anthropic-3.5-sonnet': 'Claude 3.5 Sonnet (Anthropic)',
     'anthropic-3-haiku': 'Claude 3 Haiku (Anthropic)',
     'anthropic-3-opus': 'Claude 3 Opus (Anthropic)',
-    'gemini-1.5-flash': 'Gemini 1.5 Flash (Google)',
+    'gemini-2-flash': 'Gemini 2 Flash (Google)',
     'gemini-1.5-pro': 'Gemini 1.5 Pro (Google)',
     'azure-openai': 'Azure OpenAI',
 };
@@ -24,7 +24,7 @@ export const modelMaxTemps = {
     'anthropic-3.5-sonnet': 1,
     'anthropic-3-opus': 1,
     'anthropic-3-haiku': 1,
-    'gemini-1.5-flash': 2,
+    'gemini-2-flash': 2,
     'gemini-1.5-pro': 2,
     'azure-openai': 2,
 };
@@ -51,7 +51,7 @@ export function getModel(
         'anthropic-3.5-sonnet': () => anthropic('claude-3-5-sonnet-20241022'),
         'anthropic-3-opus': () => anthropic('claude-3-opus-20240229'),
         'anthropic-3-haiku': () => anthropic('claude-3-haiku-20240307'),
-        'gemini-1.5-flash': () => google('gemini-1.5-flash'),
+        'gemini-2-flash': () => google('gemini-2.0-flash'),
         'gemini-1.5-pro': () => google('gemini-1.5-pro'),
         'azure-openai': () =>
             resourceName && deploymentName
